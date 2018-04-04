@@ -1,0 +1,32 @@
+{
+  "name": "phaser3-typescript-template",
+  "version": "1.0.0",
+  "description": "A Phaser 3 TypeScript Template",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack && webpack-dev-server --port=8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wtravO/phaser3-typescript-template.git"
+  },
+  "author": "Travis O'Neal",
+  "license": "MIT",
+  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "bugs": {
+    "url": "https://github.com/wtravO/phaser3-typescript-template/issues"
+  },
+  "devDependencies": {
+    "raw-loader": "^0.5.1",
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.8.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.4",
+    "phaser": "^3.3.0",
+    "uglifyjs-webpack-plugin": "^1.2.4"
+  }
+}
