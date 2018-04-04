@@ -1,6 +1,7 @@
 # Phaser 3 Webpack Project Template
 
 A Phaser 3 TypeScript Template
+
 Modeled after [Phaser 3 Project Template](https://github.com/photonstorm/phaser3-project-template)
 
 ### Requirements
