@@ -19,8 +19,8 @@ export class Preloader extends Phaser.Scene {
         bar.setPosition(bar.x - (bar.width / 2), bar.y);
         bar.setScale(0, 1);
         
-        this.load.on('fileprogress', () => {
-            bar.setScale(this.load.progress, 1);
+        this.load.on('progress', (progress: number) => {
+            bar.setScale(progress, 1);
         });
 
         this.load.on('complete', function () {
