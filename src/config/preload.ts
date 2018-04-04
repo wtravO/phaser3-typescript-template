@@ -18,7 +18,7 @@ export class AudioFile {
 
 const assetDir = "../../assets";
 
-export const LoadConfig = {
+export const config = {
     // spritesheets
     ssPath: `${assetDir}/spritesheets/`,
     sheets: [
