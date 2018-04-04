@@ -34,7 +34,8 @@ export class Preloader extends Phaser.Scene {
     }
 
     create() {
-        this.scene.start("main");
+        this.scene.start('main');
+        this.scene.remove('preloader');
     }
 
     loadAtlas() {
