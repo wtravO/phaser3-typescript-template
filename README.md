@@ -1,4 +1,4 @@
-# Phaser 3 Webpack Project Template
+# Phaser 3 TypeScript/Webpack Project Template
 
 A Phaser 3 TypeScript Template
 
