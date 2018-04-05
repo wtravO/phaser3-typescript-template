@@ -5,7 +5,7 @@
   "scripts": {
     "build:dev": "webpack --env dev --progress",
     "build:prod": "webpack --env prod --progress",
-    "start": "run build:dev && webpack-dev-server --port=8000"
+    "start": "webpack --env dev --progress && webpack-dev-server --env dev --port=8000"
   },
   "repository": {
     "type": "git",
