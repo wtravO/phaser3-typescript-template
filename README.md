@@ -15,5 +15,12 @@ Run next commands in your terminal:
 | Command | Description |
 |---------|-------------|
 | `npm install` | Install dependencies and launch browser with examples.|
+| `npm build:dev` | Builds a unminified copy of your game, with source maps, for debugging purposes. |
+| `npm build:prod` | Builds a uglified/minified copy of your game without source maps for production use. |
 | `npm start` | Launch browser of choice and navigate to [http://localhost:8000/](http://localhost:8000/). <br> Press `Ctrl + C` in NodeJS terminal to kill **webpack-dev-server** process. |
 =======
+
+## Important Notes
+
+Currently in the [index.html](https://github.com/wtravO/phaser3-typescript-template/blob/master/index.html) the scripts are targetted towards the development environment.<br>These will need to be updated to target the .min.js file versions when building for production.
+
