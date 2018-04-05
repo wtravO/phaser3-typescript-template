@@ -10,7 +10,8 @@ const config: webpack.Configuration = {
     output: {
         path: path.resolve(__dirname, 'build'),
         publicPath: '/build/',
-        filename: '[name].js'
+        filename: '[name].js',
+        devtoolModuleFilenameTemplate: '../[resource-path]'
     },
     module: {
         rules: [
