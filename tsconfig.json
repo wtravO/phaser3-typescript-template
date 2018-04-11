@@ -3,9 +3,10 @@
         "target": "es5",
         "moduleResolution": "node",
         "module": "CommonJS",
-        "strict": true
+        "strict": true,
+        "sourceMap": true
     },
     "include": [
-        "src/**/*"
+        "./src/**/*"
     ]
 }

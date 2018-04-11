@@ -6,7 +6,7 @@ const config: webpack.Configuration = {
         game: './src/Game.ts'
     },
     mode: 'development',
-    devtool: 'source-map',
+    devtool: 'cheap-module-source-map',
     output: {
         path: path.resolve(__dirname, 'build'),
         publicPath: '/build/',
