@@ -20,7 +20,3 @@ Run next commands in your terminal:
 | `npm start` | Launch browser of choice and navigate to [http://localhost:8000/](http://localhost:8000/). <br> Press `Ctrl + C` in NodeJS terminal to kill **webpack-dev-server** process. |
 =======
 
-## Important Notes
-
-Currently in the [index.html](https://github.com/wtravO/phaser3-typescript-template/blob/master/index.html) the scripts are targetted towards the development environment.<br>These will need to be updated to target the .min.js file versions when building for production.
-
