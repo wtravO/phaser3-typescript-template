@@ -4,10 +4,12 @@ export class Preloader extends Phaser.Scene {
     constructor() {
         super({
             key: 'preloader',
-            files: [
-                { type: 'image', key: 'bar', url: '../../assets/images/loadBar.png' },
-                { type: 'image', key: 'barBg', url: '../../assets/images/barBg.png' }
-            ]
+            pack: {
+                files: [
+                    { type: 'image', key: 'bar', url: '../../assets/images/loadBar.png' },
+                    { type: 'image', key: 'barBg', url: '../../assets/images/barBg.png' }
+                ]
+            }
         });
     }
 
@@ -15,17 +17,19 @@ export class Preloader extends Phaser.Scene {
         // add the loading bar to use as a display for the loading progress of the remainder of the assets
         const barBg = this.add.image(this.sys.canvas.width / 2, this.sys.canvas.height / 2, 'barBg');
         const bar = this.add.sprite(this.sys.canvas.width / 2, this.sys.canvas.height / 2, 'bar');
-        bar.setOrigin(0, 0.5);
-        bar.setPosition(bar.x - (bar.width / 2), bar.y);
-        bar.setScale(0, 1);
+
+        const mask = this.make.graphics({
+            x: bar.x - (bar.width / 2),
+            y: bar.y - (bar.height / 2),
+            add: false
+        });
+        mask.fillRect(0, 0, 0, bar.height);
+
+        bar.mask = new Phaser.Display.Masks.GeometryMask(this, mask);
         
         this.load.on('progress', (progress: number) => {
-            bar.setScale(progress, 1);
-        });
-
-        this.load.on('complete', function () {
-            barBg.destroy();
-            bar.destroy();
+            mask.clear();
+            mask.fillRect(0, 0, bar.width * progress, bar.height);
         });
 
         // load assets declared in the preload config
