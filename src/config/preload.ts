@@ -16,7 +16,7 @@ export class AudioFile {
     ogg?: string;
 }
 
-const assetDir = "../../assets";
+const assetDir = "./assets"; // relative to build dir
 
 export const config = {
     // spritesheets

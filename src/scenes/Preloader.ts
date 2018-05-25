@@ -6,8 +6,8 @@ export class Preloader extends Phaser.Scene {
             key: 'preloader',
             pack: {
                 files: [
-                    { type: 'image', key: 'bar', url: '../../assets/images/loadBar.png' },
-                    { type: 'image', key: 'barBg', url: '../../assets/images/barBg.png' }
+                    { type: 'image', key: 'bar', url: './assets/images/loadBar.png' },
+                    { type: 'image', key: 'barBg', url: './assets/images/barBg.png' }
                 ]
             }
         });
@@ -39,7 +39,6 @@ export class Preloader extends Phaser.Scene {
 
     create() {
         this.scene.start('main');
-        this.scene.remove('preloader');
     }
 
     loadAtlas() {
@@ -49,7 +48,7 @@ export class Preloader extends Phaser.Scene {
         this.load.setPath(sheetPath);
 
         for (let i = 0; i < sheets.length; i++) {
-            this.load.atlas(sheets[i], `${sheetPath + sheets[i]}.png`, `${sheetPath + sheets[i]}.json`);
+            this.load.atlas(sheets[i], `${sheets[i]}.png`, `${sheets[i]}.json`);
         }
     }
 
@@ -60,7 +59,7 @@ export class Preloader extends Phaser.Scene {
         this.load.setPath(audioPath);
 
         for (let i = 0; i < audioFiles.length; i++) {
-            this.load.audio(audioFiles[i].key, audioPath + audioFiles[i].mp3, audioPath + audioFiles[i].ogg);
+            this.load.audio(audioFiles[i].key, audioFiles[i].mp3, audioFiles[i].ogg);
         }
     }
 }
