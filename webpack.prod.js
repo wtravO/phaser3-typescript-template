@@ -1,9 +1,9 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
+const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const config = {
+module.exports = {
     entry: {
         game: './src/Game.ts'
     },
@@ -66,5 +66,3 @@ const config = {
         })
     ]
 };
-
-export default config;
